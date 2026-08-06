@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Toggle</title>
+</head>
+
+<body>
+
+  <button class="btn-class">White Mode</button>
+
+  <h1 class="h1-class">This is a heading</h1>
+
+  <p class="p-class">
+    This is a paragraph.
+  </p>
+
+  <div class="div-class">
+    <p class="inner-para">
+      This is a paragraph inside a div.
+    </p>
+  </div>
+
+  <script>
+    const body = document.body;
+    const heading = document.querySelector(".h1-class");
+    const paragraph = document.querySelector(".p-class");
+    const innerParagraph = document.querySelector(".inner-para");
+    const div = document.querySelector(".div-class");
+    const button = document.querySelector(".btn-class");
+
+    let isDarkMode = false;
+
+    function enableDarkMode() {
+      body.style.backgroundColor = "black";
+
+      heading.style.color = "white";
+      paragraph.style.color = "white";
+      innerParagraph.style.color = "white";
+      div.style.color = "white";
+
+      button.textContent = "Dark Mode";
+
+      isDarkMode = true;
+    }
+
+    function enableLightMode() {
+      body.style.backgroundColor = "white";
+
+      heading.style.color = "black";
+      paragraph.style.color = "black";
+      innerParagraph.style.color = "black";
+      div.style.color = "black";
+
+      button.textContent = "White Mode";
+
+      isDarkMode = false;
+    }
+
+    button.addEventListener("click", function () {
+
+      if (isDarkMode === false) {
+        enableDarkMode();
+      } else {
+        enableLightMode();
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

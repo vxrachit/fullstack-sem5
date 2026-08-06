@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Practice Page</title>
+</head>
+<body>
+
+    <div>
+        <p class="p-class">This is a paragraph.</p>
+        <button id = "submit-btn">Click Me</button>
+    </div>
+
+    <h1>Welcome to HTML Practice</h1>
+        <script>
+            const btn = document.querySelector('#submit-btn');
+            //btn.innerText = " Submit"
+            const para = document.querySelector(".p-class")
+            //para.innerText = "Text is changed by DOM manipulation."
+            const bd = document.querySelector("#body-id");
+
+            function btnClick() {
+                para.innerText = "Button is clicked and text is changed by DOM manipulation.";
+            }
+
+            btn.addEventListener('click', () => {
+                para.innerText = "Button is clicked and text is changes (array function)";
+                bd.style.backgroundColor = "black";
+                para.style.color = "white";
+
+            });
+        </script>
+
+
+</body>
+</html>
