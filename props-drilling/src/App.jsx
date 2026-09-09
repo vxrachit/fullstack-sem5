@@ -1,13 +1,18 @@
 import './App.css'
-import Counter from './components/Counter.jsx'
 import UserData from './components/UserData.jsx'
-
-
+import UserContext from './components/UserContext.jsx'
+import { useState } from 'react'
 function App() {
+  const [user , setUser] = useState({
+        name: "Meow",
+        age: 0,
+        city: "Mathura"
+    });
   return (
   <>
-    <Counter/>
+  <UserContext.Provider value={{user , setUser}}>
     <UserData/>
+  </UserContext.Provider>
   </>
   )
 }
