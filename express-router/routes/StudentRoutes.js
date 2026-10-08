@@ -1,14 +1,8 @@
 import express from "express";
+import { getStudents, getStudentById } from "../controller/StudentController.js";
 const router = express.Router();
 
-router.get("/allStudents",(req,res) => {
-    res.send("All Students Data");
-})
+router.get("/allStudents",getStudents)
 
-router.get("/student/:id",(req,res) =>{
-    res.json({
-        "id": req.params.id,
-    })
-})
-
+router.get("/student/:id",getStudentById)
 export default router;
