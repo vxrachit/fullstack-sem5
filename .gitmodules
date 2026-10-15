@@ -1,0 +1,6 @@
+[submodule "ClassProject/GLA-FS-EXPRESS"]
+	path = ClassProject/GLA-FS-EXPRESS
+	url = https://github.com/vxrachit/GLA-FS-EXPRESS.git
+[submodule "ClassProject/GLA-FS-PJ1"]
+	path = ClassProject/GLA-FS-PJ1
+	url = https://github.com/vxrachit/GLA-FS-PJ1.git
